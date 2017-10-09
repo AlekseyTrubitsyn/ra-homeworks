@@ -43,7 +43,7 @@ class App extends React.Component {
       })
     }
   }
-  
+
   render() {
     const props = {};
     if (this.state.isWarning) {
@@ -53,7 +53,7 @@ class App extends React.Component {
         backgroundColor: this.state.color
       };
     }
-    console.log(props);
+
     return (
       <figure {...props}>
         <HexInput
