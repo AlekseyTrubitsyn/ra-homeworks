@@ -30,16 +30,16 @@ function Listing({ data }) {
             priceWithCurrency = price + ' GBP';
         }
 
-        let quantityClassName = '';
+        let quantityClassName = 'item-quantity';
 
         if (quantity <= 10) {
-          quantityClassName = 'level-low';
+          quantityClassName += ' level-low';
 
         } else if (quantity <= 20) {
-          quantityClassName = 'level-medium';
+          quantityClassName += ' level-medium';
 
         } else {
-          quantityClassName = 'level-high';
+          quantityClassName += ' level-high';
         }
 
         return (
@@ -52,7 +52,7 @@ function Listing({ data }) {
             <div className="item-details">
               <p className="item-title">{ title }</p>
               <p className="item-price">{ priceWithCurrency }</p>
-              <p className="item-quantity level-medium">{ quantity } left</p>
+              <p className={quantityClassName}>{ quantity } left</p>
             </div>
           </div>
         )
