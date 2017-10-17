@@ -99,12 +99,11 @@ function CalendarBody({ year, monthNum, dayNum }) {
     return createArrayOfDays(prevMonthDaysCount, dayNum);
   }
 
+
   function getNextMonthDays(lastDayOfMonth) {
     const nextMonthDaysCount = (7 - (lastDayOfMonth.getDay() || 7));
-    const firstDayOfNextMonth = new Date(lastDayOfMonth + 86400000);
-    const dayNum = firstDayOfNextMonth.getDate();
 
-    return createArrayOfDays(nextMonthDaysCount, dayNum);
+    return createArrayOfDays(nextMonthDaysCount, 1);
   }
 
   return (
